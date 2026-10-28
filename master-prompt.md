@@ -2,7 +2,7 @@
 
 ## When to use which instructions
 
-Check each request against this list. When one matches, read those instructions and follow them exactly. When none match, answer normally.
+Check each request against this list. When one matches, read those instructions and follow them exactly. When more than one matches, follow each for its part of the request; if they conflict, ask the requester. When none match, answer normally.
 
 | If the request is… | Use |
 |---|---|
