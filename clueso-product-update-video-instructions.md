@@ -6,7 +6,7 @@ Use these when someone asks you to turn a product update (usually a #product-upd
 
 ## Prerequisites
 
-- **Clueso access:** the requester has Clueso connected in their own claude.ai account. Claude builds in Clueso through the requester's own session, so start that session on their message if the channel has no Clueso connector.
+- **Clueso access:** anyone can request a video; the requester doesn't need their own Clueso connection. Claude uses the requester's Clueso connection if they have one, otherwise the channel's Clueso connector. Only if neither exists, Claude says so in the thread and asks someone with Clueso connected to re-send the request.
 - **Network:** the environment allows `connect.us.clueso.io` with **PUT** (GET-only blocks uploads). With it, Claude pushes screenshots from Slack into Clueso itself.
 - **Source files:** Claude must be able to open them. Invite Claude to the source channel (`/invite @Claude`) or drop the files into the request thread. Otherwise, video files (mp4) go through a Clueso upload link Claude posts; the requester drops the files there and replies "uploaded".
 
@@ -37,13 +37,13 @@ Use these when someone asks you to turn a product update (usually a #product-upd
 ## Workflow
 
 1. Read the post and every screenshot or recording attached to it.
-2. **Approval checkpoint.** Post one message with: the clueprint you'll use, the title card, the voiceover line per section, the sales enablement brief, and any upload link the requester needs. Wait for "go" or edits ("uploaded" counts as go).
+2. If you need an upload link for video files, post it and wait for "uploaded". Otherwise go straight to building; don't wait for approval.
 3. Build the project in Clueso: clueprint, media, voiceover, captions, music, outro.
 4. Add zooms and spotlights.
 5. Check frames: one per clip, and one inside every zoom or spotlight.
 6. **Publish as a player** to get the watchclueso.com link. This is a separate step from export, so never skip it.
 7. Export the MP4 too when asked.
-8. Post the result (format below).
+8. Post the result and the sales enablement brief (format below).
 
 ## Deliverable
 
@@ -51,6 +51,7 @@ Reply in the thread with:
 
 - **Watch link:** `https://watchclueso.com/embed/...` Permanent, plays without a Clueso login, and shows the new version after any republish. This is the main deliverable.
 - **MP4** (if exported): the download link expires after about an hour, so say so; the file also stays in the editor's Exports tab.
+- **Sales enablement brief** (also added as a Clueso project comment).
 - Length, what's in each section, which effects you added, and what you checked versus did not check (for example, "not watched end to end").
 
 ## Don'ts
@@ -58,5 +59,4 @@ Reply in the thread with:
 - Don't hand over only an MP4 download link; always publish and share the watchclueso link.
 - Don't put sales enablement content in the video.
 - Don't skip zooms and spotlights or wait to be asked for them.
-- Don't publish before the approval checkpoint.
 - Don't include the Clueso editor (web.clueso.io) link in the reply.
